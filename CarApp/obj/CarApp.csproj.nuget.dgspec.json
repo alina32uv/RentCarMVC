@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Alina\\source\\repos\\CarApp\\CarApp\\CarApp.csproj": {}
+    "C:\\Users\\Alina\\source\\repos\\CarApp - Copie\\CarApp\\CarApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Alina\\source\\repos\\CarApp\\CarApp\\CarApp.csproj": {
+    "C:\\Users\\Alina\\source\\repos\\CarApp - Copie\\CarApp\\CarApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Alina\\source\\repos\\CarApp\\CarApp\\CarApp.csproj",
+        "projectUniqueName": "C:\\Users\\Alina\\source\\repos\\CarApp - Copie\\CarApp\\CarApp.csproj",
         "projectName": "CarApp",
-        "projectPath": "C:\\Users\\Alina\\source\\repos\\CarApp\\CarApp\\CarApp.csproj",
+        "projectPath": "C:\\Users\\Alina\\source\\repos\\CarApp - Copie\\CarApp\\CarApp.csproj",
         "packagesPath": "C:\\Users\\Alina\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Alina\\source\\repos\\CarApp\\CarApp\\obj\\",
+        "outputPath": "C:\\Users\\Alina\\source\\repos\\CarApp - Copie\\CarApp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -46,6 +46,18 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
+            "LazyCache": {
+              "target": "Package",
+              "version": "[2.4.0, )"
+            },
+            "MediatR": {
+              "target": "Package",
+              "version": "[12.1.1, )"
+            },
+            "MediatR.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[11.1.0, )"
+            },
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
               "version": "[7.0.8, )"

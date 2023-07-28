@@ -1,5 +1,5 @@
-﻿using CarApp.Entities;
-using CarApp.Migrations;
+﻿using CarApp.Migrations;
+using CarApp.Pages.Transmissions;
 
 namespace CarApp.Interfaces
 {

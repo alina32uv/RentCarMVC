@@ -1,8 +1,13 @@
 ﻿using CarApp.Data;
-using CarApp.Entities;
 using CarApp.Interfaces;
 using CarApp.Migrations;
-using CarApp.Models;
+using CarApp.Pages.Brands;
+using CarApp.Pages.Car;
+using CarApp.Pages.Drives;
+using CarApp.Pages.Fuels;
+
+using CarApp.Pages.Fuels;
+using CarApp.Pages.Transmissions;
 using Microsoft.EntityFrameworkCore;
 using System.Linq;
 
@@ -213,7 +218,7 @@ namespace CarApp.Repositories
             return ctx.Fuel.ToList();
         }
 
-        public async Task<List<Entities.VehicleType>> GetVehicleType()
+        public async Task<List<Pages.Vehicle.VehicleType>> GetVehicleType()
         {
             return ctx.VehicleType.ToList();
         }

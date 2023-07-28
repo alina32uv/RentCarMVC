@@ -1,6 +1,6 @@
 ﻿using CarApp.Data;
-using CarApp.Entities;
 using CarApp.Interfaces;
+using CarApp.Pages.Brands;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;

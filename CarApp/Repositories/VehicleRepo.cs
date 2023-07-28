@@ -1,7 +1,7 @@
 ﻿using CarApp.Data;
-using CarApp.Entities;
 using CarApp.Interfaces;
 using CarApp.Migrations;
+using CarApp.Pages.Vehicle;
 using Microsoft.EntityFrameworkCore;
 
 namespace CarApp.Repositories
@@ -17,11 +17,11 @@ namespace CarApp.Repositories
 
         public async Task AddNew(string name)
         {
-            await ctx.VehicleType.AddAsync(new Entities.VehicleType { Name = name });
+            await ctx.VehicleType.AddAsync(new Pages.Vehicle.VehicleType { Name = name });
             await ctx.SaveChangesAsync();
         }
 
-        public async Task Delete(Entities.VehicleType vehicle)
+        public async Task Delete(Pages.Vehicle.VehicleType vehicle)
         {
             var existingtype = await GetById(vehicle.VehicleId);
             if (existingtype != null)
@@ -32,13 +32,13 @@ namespace CarApp.Repositories
             
         }
 
-        public async Task<List<Entities.VehicleType>> GetAll()
+        public async Task<List<Pages.Vehicle.VehicleType>> GetAll()
         {
             var types = await ctx.VehicleType.ToListAsync();
             return types;
         }
 
-        public  async Task<Entities.VehicleType> GetById(int id)
+        public  async Task<Pages.Vehicle.VehicleType> GetById(int id)
         {
             var brandFromDb = await ctx.VehicleType.FindAsync(id);
             // var brandFromDbFirst = ctx.Brand.FirstOrDefault(u => u.BrandId == id);
@@ -47,7 +47,7 @@ namespace CarApp.Repositories
             return brandFromDb;
         }
 
-        public async Task Update(Entities.VehicleType vehicle)
+        public async Task Update(Pages.Vehicle.VehicleType vehicle)
         {
             var existingType = await GetById(vehicle.VehicleId);
             if (existingType != null)

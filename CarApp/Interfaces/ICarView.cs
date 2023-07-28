@@ -1,6 +1,12 @@
-﻿using CarApp.Entities;
-using CarApp.Models;
+﻿using CarApp.Pages.Body;
+using CarApp.Pages.Body;
+using CarApp.Pages.Fuels;
 using NuGet.Configuration;
+using CarApp.Pages.Drives;
+using CarApp.Pages.Transmissions;
+using CarApp.Pages.Vehicle;
+using CarApp.Pages.Car;
+using CarApp.Pages.Brands;
 
 namespace CarApp.Interfaces
 {
@@ -17,7 +23,7 @@ namespace CarApp.Interfaces
         Task Delete(CarViewModel car);
         Task<List<Fuel>> GetFuel();
         Task<List<Drive>> GetDrive();
-        Task<List<CarBodyType>> GetCarBody();
+        Task<List<Entities.CarBodyType>> GetCarBody();
         Task<List<VehicleType>> GetVehicleType();
         Task<List<Brand>> GetBrand();
         Task<List<Transmission>> GetTransmission();

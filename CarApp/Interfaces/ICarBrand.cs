@@ -1,4 +1,4 @@
-﻿using CarApp.Entities;
+﻿using CarApp.Pages.Brands;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
 

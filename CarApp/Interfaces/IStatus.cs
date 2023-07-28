@@ -1,4 +1,4 @@
-﻿using CarApp.Entities;
+﻿using CarApp.Pages.Status;
 
 namespace CarApp.Interfaces
 {

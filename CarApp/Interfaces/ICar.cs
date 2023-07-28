@@ -1,5 +1,7 @@
-﻿using CarApp.Entities;
-using CarApp.Models;
+﻿using CarApp.Models;
+using CarApp.Pages.Car;
+using CarApp.Pages.Fuels;
+using CarApp.Pages.RentInfo;
 
 namespace CarApp.Interfaces
 {
@@ -17,7 +19,7 @@ namespace CarApp.Interfaces
         Task<Car> GetById(int id);
         Task Update(CarViewModel car);
         Task Delete(CarViewModel car);
-        Task RentCar(RentModel rentModel);
+        Task RentCar(RentInfo rentModel);
         Task<bool> IsCarAvailable(int carId, DateTime dateBring, DateTime dateReturn);
         Task<bool> Rented(int carId, string userId, DateTime currentDate);
         //public Task<List<Car>> FilterCars(string fuelType, int numberOfDoors);

@@ -1,4 +1,5 @@
 ﻿using CarApp.Entities;
+using CarApp.Pages.Body;
 
 namespace CarApp.Interfaces
 {

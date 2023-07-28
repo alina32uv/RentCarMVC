@@ -1,4 +1,7 @@
 ﻿using CarApp.Entities;
+using CarApp.Pages.Body;
+using CarApp.Pages.Car;
+using CarApp.Pages.Vehicle;
 using Microsoft.EntityFrameworkCore;
 
 namespace CarApp.Models

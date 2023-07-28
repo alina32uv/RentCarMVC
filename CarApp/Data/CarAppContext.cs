@@ -1,5 +1,14 @@
 ﻿using CarApp.Entities;
-using CarApp.Models;
+using CarApp.Pages.Body;
+using CarApp.Pages.Brands;
+using CarApp.Pages.Car;
+using CarApp.Pages.Drives;
+using CarApp.Pages.Fuels;
+using CarApp.Pages.Insurances;
+using CarApp.Pages.RentInfo;
+using CarApp.Pages.Status;
+using CarApp.Pages.Transmissions;
+using CarApp.Pages.Vehicle;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System.Drawing.Drawing2D;

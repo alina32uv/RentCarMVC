@@ -1,7 +1,9 @@
 ﻿using CarApp.Data;
-using CarApp.Entities;
 using CarApp.Interfaces;
 using CarApp.Models;
+using CarApp.Pages.Car;
+using CarApp.Pages.Fuels;
+using CarApp.Pages.RentInfo;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Drawing;
@@ -265,14 +267,15 @@ namespace CarApp.Repositories
 
             return true;
         }*/
-        public async Task RentCar(RentModel rentModel)
+        public async Task RentCar(RentInfo rentModel)
         {
             var rentInfo = new RentInfo
             {
                 CarId = rentModel.CarId,
                 DateBring = rentModel.DateBring,
                 DateReturn = rentModel.DateReturn,
-                UserId = rentModel.UserId
+                UserId = rentModel.UserId,
+                StatusId= rentModel.StatusId
             };
 
             ctx.RentInfo.Add(rentInfo);

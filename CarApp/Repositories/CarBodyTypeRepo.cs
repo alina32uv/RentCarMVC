@@ -1,6 +1,7 @@
 ﻿using CarApp.Data;
 using CarApp.Entities;
 using CarApp.Interfaces;
+using CarApp.Pages.Body;
 using Microsoft.EntityFrameworkCore;
 
 namespace CarApp.Repositories

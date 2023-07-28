@@ -261,6 +261,9 @@ namespace CarApp.Migrations
                     b.Property<DateTime>("DateReturn")
                         .HasColumnType("datetime2");
 
+                    b.Property<int>("StatusId")
+                        .HasColumnType("int");
+
                     b.Property<string>("UserId")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -270,6 +273,8 @@ namespace CarApp.Migrations
                     b.HasIndex("CarId");
 
                     b.HasIndex("CustomerId");
+
+                    b.HasIndex("StatusId");
 
                     b.ToTable("RentInfo");
                 });
@@ -461,6 +466,9 @@ namespace CarApp.Migrations
                     b.Property<DateTime>("DateReturn")
                         .HasColumnType("datetime2");
 
+                    b.Property<int>("StatusId")
+                        .HasColumnType("int");
+
                     b.Property<string>("UserId")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -468,6 +476,8 @@ namespace CarApp.Migrations
                     b.HasKey("RentInfo");
 
                     b.HasIndex("CarId");
+
+                    b.HasIndex("StatusId");
 
                     b.ToTable("RentModel");
                 });
@@ -780,7 +790,15 @@ namespace CarApp.Migrations
                         .WithMany("RentInfo")
                         .HasForeignKey("CustomerId");
 
+                    b.HasOne("CarApp.Entities.Status", "Status")
+                        .WithMany()
+                        .HasForeignKey("StatusId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.Navigation("Car");
+
+                    b.Navigation("Status");
                 });
 
             modelBuilder.Entity("CarApp.Entities.Transmission", b =>
@@ -805,7 +823,15 @@ namespace CarApp.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("CarApp.Entities.Status", "Status")
+                        .WithMany()
+                        .HasForeignKey("StatusId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.Navigation("Car");
+
+                    b.Navigation("Status");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
